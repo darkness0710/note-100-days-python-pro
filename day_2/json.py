@@ -11,6 +11,7 @@ result = []
 
 for value in filter:
     if 'stepSize' in value.keys():
-        result.append(value['stepSize'])
+        if value['filterType'] == 'LOT_SIZE':
+            result.append(value['stepSize'])
 
 print(result)
