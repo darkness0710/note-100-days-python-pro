@@ -4,8 +4,14 @@
   
 import simplejson as json
   
+# Khi load từ file
 f = open('test.json')
 data = json.load(f)
+
+# Khi load từ API và có được json
+# f = '{"name": "Bob", "languages": "English"}'
+# data = json.loads(f)
+
 filter = data['symbols'][0]['filters']
 result = []
 
