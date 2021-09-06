@@ -4,15 +4,11 @@ def get_data_coin(input):
     response = {
         'gia_mua': '',
         'gia_sl': '',
-        'tp2': ''
+        'tp2': '',
+        'symbol': ''
     }
     try:
         arr = input.split('\n')
-        response = {
-            'gia_mua': '',
-            'gia_sl': '',
-            'tp2': ''
-        }
         for value in arr:
             if 'Gia Mua' in value: # Check string "Gia Mua" có tồn tại trong chuỗi hay không?
                 response['gia_mua'] = re.findall("\d+\.\d+", value)[0]
@@ -20,6 +16,8 @@ def get_data_coin(input):
                 response['gia_sl'] = re.findall("\d+\.\d+", value)[0]
             if 'TP2' in value: # Check string "TP2" có tồn tại trong chuỗi hay không?
                 response['tp2'] = re.findall("\d+\.\d+", value)[0]
+            if 'Symbol' in value: # Check string "TP2" có tồn tại trong chuỗi hay không?
+                response['symbol'] = value.split("Symbol:", 1)[1].strip() # Lấy chuỗi bên phải kí tự Symbol và trim space
         return response
     except :
         return response
