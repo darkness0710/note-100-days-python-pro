@@ -1,0 +1,9 @@
+✅ Symbol:  UNIUSDT
+⏰ Thời gian vào lệnh:  9/6/2021 10:31:54 AM
+▶️ Gia Mua:  30.04000000
+⏸ Gia SL :  27.0
+⏹ TP1:   31.5
+⏹ TP2:  34.5
+⏹ TP3:  39.1
+⏹ TP4:  45.1
+⏹ TP5:  60.1
