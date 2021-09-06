@@ -30,4 +30,4 @@ print(get_data_coin(input))
 # B2. Kiểm tra dòng đó chứa kí tự cần tìm hay không?
 # B3. Dùng regex lấy giá trị float trong chuỗi
 # re.findall("\d+\.\d+", value)[0] -> Trả về mảng dữ liệu chứa giá trị float. Ví du:
-# "TP2: 12.1" => trả về [12.1] và chúng ta cần lấy phần tử đầu tiên -> [12.1][0]
+# "TP2: 12.1" => Check chuỗi chứa TP2 sau đó trả về dạng mảng [12.1] và chúng ta cần lấy phần tử đầu tiên của mảng -> [12.1][0]
