@@ -4,6 +4,11 @@ class Caculator:
     def excute(x_input, y):
         if y > 0 and y <= 1:
             x = Caculator.get_x_value_by_y(x_input, y)
+            if x >= y:
+                x = Caculator.get_max_of_x(x, y)
+            else:
+                x = ''
+                y = ''    
         else:
             x = ''
             y = ''
@@ -35,33 +40,22 @@ class Caculator:
 
             x = float(x)
         return x
+    
+    def get_max_of_x(x, y):
+        count = 1
+        while (True):
+            tmp_y = count * y
+            if tmp_y > x:
+                x = (count - 1) * y
+                break
+            count += 1
+        
+        return x
 
-# x = 9.67 và y = 1
-print(Caculator.excute(9.67, 1))
 
-# x = 9.67 và y = 0.1
-print(Caculator.excute(9.67, 0.1))
 
-# x = 9.67 và y = 0.01
-print(Caculator.excute(9.67, 0.01))
+# x = 7.89 và y = 0.02
+print(Caculator.excute(7.89, 0.02))
 
-# x = 9.67 và y = 0.001
-print(Caculator.excute(9.67, 0.001))
-
-# x = 9.6789 và y = 1
-print(Caculator.excute(9.6789, 1))
-
-# x = 9.6789 và y = 0.1
-print(Caculator.excute(9.6789, 0.1))
-
-# x = 9.6789 và y = 0.01
-print(Caculator.excute(9.6789, 0.01))
-
-# x = 9.6789 và y = 0.001
-print(Caculator.excute(9.6789, 0.001))
-
-# x = 9.6789 và y = 0.0001
-print(Caculator.excute(9.6789, 0.0001))
-
-# x = 9.6789 và y = 0.00001
-print(Caculator.excute(9.6789, 0.00001))
+# x = 2.2222 và y = 0.99
+print(Caculator.excute(2.2222, 0.02))
