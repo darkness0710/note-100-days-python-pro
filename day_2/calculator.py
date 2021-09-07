@@ -58,4 +58,4 @@ class Caculator:
 print(Caculator.excute(7.89, 0.02))
 
 # x = 2.2222 và y = 0.99
-print(Caculator.excute(2.2222, 0.02))
+print(Caculator.excute(2.2222, 0.99))
